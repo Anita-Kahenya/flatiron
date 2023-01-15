@@ -36,3 +36,27 @@
     transform: rotate(360deg);
   }
 }
+
+.navBar {
+  justify-content: center;
+  color: white;
+  text-align: center;
+  align-items: center;
+  /* border: 1pc solid; */
+}
+
+.search{
+  padding: 0.3pc;
+  margin: 1pc;
+
+}
+
+.details {
+  display: flex;
+  justify-content: space-around;
+}
+
+.bttn {
+  margin: 2pc;
+
+}
