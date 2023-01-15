@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, } from 'react';
 import './App.css';
 import Header from './components/Header'; 
 import Form from './components/Form';
@@ -9,11 +9,11 @@ function App() {
 
   const [list, setList] = useState([]);
 
-  useEffect(() => {
-    fetch('http://localhost:8001/transactions')
-    .then(res => res.json())
-    .then(data => setList(data))
-  }, [])
+  // useEffect(() => {
+  //   fetch('http://localhost:8001/transactions')
+  //   .then(res => res.json())
+  //   .then(data => setList(data))
+  // }, [])
 
 
   return (
