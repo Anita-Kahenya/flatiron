@@ -104,6 +104,13 @@
       "category": "Drink",
       "amount": "100",
       "id": 15
+    },
+    {
+      "date": "2023-01-17",
+      "description": "Paycheck",
+      "category": "Fashion",
+      "amount": "21.54",
+      "id": 16
     }
   ]
 }

@@ -6,6 +6,11 @@ function Table({list}) {
     e.preventDefault();
     const remove = e.target
     remove.parentElement.parentElement.remove()
+
+    fetch("http://localhost:8001/transactions", {
+      method: "DELETE",
+      headers: {}
+    })
   }
   
    
