@@ -1,7 +1,7 @@
 # Bank of Flatiron
 ## Author : Rawllings Kiprop, Date: 15/01/2023
 ## Project Description
-The purpose of this project is to come up with a security solution in apartments. I have created a website with a data base which has full information of the tenants living in the same apartment. When someone wants to get into the place, the security personell at the gate will look if he/she is a tenant in the residential home. If a visitor comes, security personell will enter their names and which house they are going into the system for referral.
+The purpose of this project is to come up with a Bank of Flatiron Transaction system. It has a date of transaction, description, category of the income and finally the amount of money a client is depositing or withdrawing from the bank of Flatiron. We also have a database where each transaction is stored and updated in the server. 
 
 SCREENSHOTS
 
