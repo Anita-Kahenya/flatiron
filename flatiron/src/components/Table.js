@@ -2,16 +2,16 @@ import React from 'react';
 
 function Table({list}) {
 
-  function handleDelete(e) {
-    e.preventDefault();
-    const remove = e.target
-    remove.parentElement.parentElement.remove()
+  // function handleDelete(e) {
+  //   e.preventDefault();
+  //   const remove = e.target
+  //   remove.parentElement.parentElement.remove()
 
-    fetch("http://localhost:8001/transactions", {
-      method: "DELETE",
-      headers: {}
-    })
-  }
+  //   fetch("http://localhost:8001/transactions", {
+  //     method: "DELETE",
+  //     headers: {}
+  //   })
+  // }
   
    
 
@@ -37,7 +37,7 @@ function Table({list}) {
       <td>{item.category}</td>
       <td>{item.amount}</td>
       <td>
-      <button onClick={handleDelete} className="btn btn-primary">Delete</button>
+      {/* <button onClick={handleDelete} className="btn btn-primary">Delete</button> */}
 
       </td>
 
