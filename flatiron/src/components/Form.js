@@ -16,21 +16,21 @@ function Form({list, setList}) {
     setAmount(0)
 
 
-  // fetch("http://localhost:8001/transactions", {
-  //   method: "POST",
-  //   headers: {
-  //     "Content-Type": "application/json",
-  //   },
-  //   body: JSON.stringify({
-  //     date,
-  //     description,
-  //     category,
-  //     amount
-  //   }
-  //   ),
-  // })
-  //   .then((res) => res.json())
-  //   .then((data) => console.log(data));
+  fetch("http://localhost:8001/transactions", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      date,
+      description,
+      category,
+      amount
+    }
+    ),
+  })
+    .then((res) => res.json())
+    .then((data) => console.log(data));
     
   }
 
