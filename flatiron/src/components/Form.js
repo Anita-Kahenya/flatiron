@@ -2,10 +2,14 @@ import React, { useState } from "react";
 
 function Form({list, setList}) {
 
+  // The useState Hook 
+
   const [date, setDate] = useState("");
   const [description, setDescription] = useState("");
   const [category, setCategory] = useState("");
   const [amount, setAmount] = useState(0);
+
+  // The Hundle Submit Function to be used in onSubmit form 
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -15,6 +19,7 @@ function Form({list, setList}) {
     setCategory("")
     setAmount(0)
 
+// The POST Request Function 
 
   fetch("http://localhost:8001/transactions", {
     method: "POST",
@@ -35,22 +40,10 @@ function Form({list, setList}) {
   }
 
 
-
-function handleSearch(e) {
-  let searchBar = e.target.value.toLowerCase();
-  setList(list.filter(item => item.description.toLowerCase().includes(searchBar)))
- 
-
-}
-
-
-
-
   return (
 
     <form onSubmit={handleSubmit}  >
 
-      <input onKeyUp={handleSearch} className="search input-group mb-3 mx-auto" type="text" name="name" placeholder="Search your recent Transaction"/>
 
       <div className="details border border-success p-2 border-opacity-10">
 
@@ -61,10 +54,7 @@ function handleSearch(e) {
         <input onChange={(e) => setAmount(e.target.value)} type="number" className="input-group-text" value={amount} placeholder="amount" />
 
         </div>
-        <button className="bttn btn  btn-secondary btn-lg mx-auto"  type="submit">Add Transaction</button>
-      
-
-      
+        <button className="bttn btn  btn-secondary btn-lg mx-auto"  type="submit">Add Transaction</button> 
     </form>
   );
 }

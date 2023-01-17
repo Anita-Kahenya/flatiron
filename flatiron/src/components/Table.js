@@ -2,16 +2,23 @@ import React from 'react';
 
 function Table({list}) {
 
-  function handleDelete(e) {
-    e.preventDefault();
-    const remove = e.target
-    remove.parentElement.parentElement.remove()
+  // The Handle Delete Function to be used to delete Items in the Table 
 
-    fetch("http://localhost:8001/transactions", {
+  function handleDelete(id) {
+   
+// The delete Fetch Function to delete Items in the Table  
+
+    fetch(`http://localhost:8001/transactions/${id}`, {
       method: "DELETE",
-      headers: {}
+      headers: {
+        "Content-Type": "application/json",
+      }
     })
+    .then(response => response.json())
+    .then(data => document.location.reload())
   }
+
+  const sortedList = list.sort((a, b) => (a.description > b.description ? 1 : -1))
   
    
 
@@ -29,16 +36,19 @@ function Table({list}) {
     </tr>
   </thead>
   <tbody>
+
+    {/* Maping Items in the Table  */}
   {
-  list.map(item => (
+   
+
+   sortedList.map(item => (
     <tr key={item.id}>
       <td>{item.date}</td>
       <td>{item.description}</td>
       <td>{item.category}</td>
       <td>{item.amount}</td>
       <td>
-      <button onClick={handleDelete} className="btn btn-primary">Delete</button>
-
+      <button onClick={ ()=> handleDelete(item.id)} className="btn btn-primary">Delete</button>
       </td>
 
     </tr>
